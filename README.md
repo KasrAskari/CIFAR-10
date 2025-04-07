@@ -26,7 +26,6 @@ The required Python libraries are listed in `requirements.txt`. Key dependencies
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/cifar10-deep-learning.git
-   cd cifar10-deep-learning
    ```
 2. (Optional) Create a virtual environment:
    ```bash
