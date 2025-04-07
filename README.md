@@ -1,50 +1,69 @@
-# CIFAR-10 Deep Learning Project
+# 🧠 CIFAR-10 Deep Learning Project
 
-This project implements and compares deep learning models for classifying images from the CIFAR-10 dataset. It includes a standard deep convolutional neural network (CNN), a hyperparameter-tuned CNN using KerasTuner, and a Wide-and-Deep model. The project evaluates these models using accuracy, F1-score, and ROC-AUC metrics.
+A deep dive into image classification using the CIFAR-10 dataset. This project implements and compares multiple deep learning architectures — including a standard CNN, a hyperparameter-tuned CNN (via KerasTuner), and a custom Wide-and-Deep model — to evaluate performance on classification tasks using **Accuracy**, **F1-score**, and **ROC-AUC**.
 
-## Project Overview
-The CIFAR-10 dataset consists of 60,000 32x32 color images across 10 classes (e.g., airplane, cat, dog). This project:
-- Loads and preprocesses the dataset, splitting it into 15% test and 85% train/validation sets.
-- Implements a deep CNN with up to 5 hidden layers.
-- Optimizes hyperparameters using KerasTuner with RandomSearch.
-- Designs a Wide-and-Deep model combining shallow and deep feature extraction.
-- Reports performance metrics in a tabular format.
+---
 
-## Prerequisites
-- Python 3.8 or higher
-- pip (Python package manager)
+## 📦 Overview
 
-## Dependencies
-The required Python libraries are listed in `requirements.txt`. Key dependencies include:
+CIFAR-10 is a classic image classification dataset containing **60,000 32×32 color images** across **10 categories** (airplane, automobile, bird, cat, deer, dog, frog, horse, ship, truck).
+
+This project includes:
+
+- 🔹 Data preprocessing and splitting (85% train/val, 15% test)
+- 🔹 A standard deep CNN with up to 5 hidden layers
+- 🔹 Hyperparameter tuning via `KerasTuner` using `RandomSearch`
+- 🔹 A Wide-and-Deep model combining shallow and deep features
+- 🔹 Metric evaluation in tabular format (Accuracy, F1, ROC-AUC)
+
+---
+
+## 🚀 Quick Start
+
+### ✅ Prerequisites
+- Python 3.8+
+- `pip` package manager
+
+### 📥 Installation
+
+1. **Clone the repo:**
+   ```bash
+   git clone https://github.com/KasrAskari/CIFAR-10
+   cd CIFAR-10
+   ```
+
+2. **(Optional) Create a virtual environment:**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate        # On Linux/Mac
+   venv\Scripts\activate           # On Windows
+   ```
+
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+---
+
+## 📚 Dependencies
+
+Main libraries used:
+
 - `numpy==1.26.4`
 - `tensorflow==2.16.1`
 - `scikit-learn==1.4.2`
 - `keras-tuner==1.4.7`
 - `pandas==2.2.2`
 
-## Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/KasrAskari/CIFAR-10
-   ```
-2. (Optional) Create a virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Linux/Mac
-   venv\Scripts\activate     # On Windows
-   ```
-3. Install the dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+(See `requirements.txt` for full list.)
 
-## Results
-The script generates a table comparing the performance of three models:
-- **Deep Model**: A CNN with 5 hidden layers.
-- **Tuned Model**: A CNN optimized with KerasTuner.
-- **Wide-and-Deep Model**: A hybrid model combining wide and deep paths.
+---
 
-Example output:
+## 📊 Results
+
+The following table compares performance across models:
+
 ```
 Results Table:
    Dataset     Deep Accuracy  Deep F1  Deep ROC-AUC  Tuned Accuracy  Tuned F1  Tuned ROC-AUC  WideDeep Accuracy  WideDeep F1  WideDeep ROC-AUC
@@ -53,15 +72,25 @@ Results Table:
 2  Test        0.73           0.72     0.91          0.76            0.75      0.93           0.74               0.73         0.92
 ```
 
-(Values are illustrative and depend on actual training.)
+📌 *Values are sample outputs. Final results depend on training runs.*
 
-## Notes
-- The dataset is normalized to [0, 1] and labels are one-hot encoded for `CategoricalCrossentropy` loss.
-- Training times may vary based on hardware (CPU/GPU).
-- For GPU acceleration, ensure TensorFlow is configured with CUDA support.
+---
 
-## Contributing
-Feel free to fork this repository, submit issues, or create pull requests with improvements!
+## 📝 Notes
 
-## License
-This project is licensed under the MIT License.
+- Images are normalized to `[0, 1]`.
+- Labels are one-hot encoded for use with `CategoricalCrossentropy`.
+- Model training time may vary depending on hardware (CPU vs. GPU).
+- For best performance, ensure TensorFlow is CUDA-enabled if using a GPU.
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome! Feel free to fork the project, open issues, or suggest improvements.
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
