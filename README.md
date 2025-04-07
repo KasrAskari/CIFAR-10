@@ -6,7 +6,7 @@ A deep dive into image classification using the CIFAR-10 dataset. This project i
 
 ## 📦 Overview
 
-CIFAR-10 is a classic image classification dataset containing **60,000 32×32 color images** across **10 categories** (airplane, automobile, bird, cat, deer, dog, frog, horse, ship, truck).  
+CIFAR-10 is a classic image classification dataset containing **50,000 32×32 color images** across **10 categories** (airplane, automobile, bird, cat, deer, dog, frog, horse, ship, truck).  
 You can find more about the dataset [here](https://keras.io/api/datasets/cifar10/).
 
 This project includes:
